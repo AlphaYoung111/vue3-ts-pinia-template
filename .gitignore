@@ -3,3 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
+
+src/auto-import.d.ts
