@@ -6,8 +6,8 @@ import HelloWorld from './components/HelloWorld.vue'
   <img alt="Vue logo" src="./assets/logo.png" />
 
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <div     class="out">
-    <div    class="inner">123</div>
+  <div class="out">
+    <div class="inner">123</div>
   </div>
 </template>
 
@@ -16,11 +16,6 @@ import HelloWorld from './components/HelloWorld.vue'
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
-
-
-
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
