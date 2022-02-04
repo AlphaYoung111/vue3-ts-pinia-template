@@ -7,7 +7,8 @@
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit":"cz"
   },
   "dependencies": {
     "pinia": "^2.0.11",
@@ -16,6 +17,8 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "@vitejs/plugin-vue": "^2.1.0",
