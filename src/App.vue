@@ -8,8 +8,17 @@
   <router-link to="/login">login</router-link>
   <router-link to="/main">main</router-link>
   <router-view />
+
+  <div>age:{{ age }}</div>
+  <button @click="userStore.addAge">+1</button>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import useUserStore from '@/store/module/user/user'
+import { storeToRefs } from 'pinia'
+
+const userStore = useUserStore()
+const { age } = storeToRefs(userStore)
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
