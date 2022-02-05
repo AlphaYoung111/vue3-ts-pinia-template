@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import Login from '@/views/login/loginIndex.vue'
+
+import { loadView } from './view-import'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -8,12 +9,11 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/login',
-    // components: () => import('@/views/login/LoginIndex.vue')
-    components: Login
+    component: loadView('login/LoginIndex')
   },
   {
     path: '/main',
-    components: Login
+    component: loadView('main/MainIndex')
   }
 ]
 

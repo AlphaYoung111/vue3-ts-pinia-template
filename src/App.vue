@@ -1,17 +1,15 @@
-<script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-import { sum } from '@/utils/test'
-</script>
-
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
 
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <div class="out">
     <div class="inner">123</div>
   </div>
-</template>
 
+  <router-link to="/login">login</router-link>
+  <router-link to="/main">main</router-link>
+  <router-view />
+</template>
+<script setup lang="ts"></script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
