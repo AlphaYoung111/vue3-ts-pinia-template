@@ -11,6 +11,7 @@
 
   <div>age:{{ age }}</div>
   <button @click="userStore.addAge">+1</button>
+  <el-button type="primary">ele 按钮</el-button>
 </template>
 <script setup lang="ts">
 import useUserStore from '@/store/module/user/user'
