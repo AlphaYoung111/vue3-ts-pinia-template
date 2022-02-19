@@ -11,6 +11,18 @@
     "prepare": "husky install",
     "commit": "cz"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{jsx,txs,ts,js,json,css,md,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "^0.25.0",
     "element-plus": "^2.0.1",
@@ -33,6 +45,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.4.0",
     "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5",
     "unplugin-auto-import": "^0.5.11",
