@@ -21,12 +21,11 @@ import useUserStore from '@/store/module/user/user'
 import { storeToRefs } from 'pinia'
 import { GlobalComponents } from 'vue'
 
-const userStore
-  = useUserStore()
-const { age } =
-  storeToRefs(userStore)
+const userStore = useUserStore()
+const { age } = storeToRefs(userStore)
 
 const formRef = ref<InstanceType<GlobalComponents['ElForm']>>()
+
 // const formResolveRef = ref<ElComponet['ElForm']>()
 // formResolveRef.value.
 console.log(import.meta.env.VITE_STR)
