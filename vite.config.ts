@@ -28,10 +28,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: "https://suggest.taobao.com/",
+        target: 'https://suggest.taobao.com/',
         // target: "https://localhost:8081/",
         changeOrigin: true,
-        rewrite: path => path.replace('/api', '/')
+        rewrite: (path) => path.replace('/api', '/')
       }
     }
   }

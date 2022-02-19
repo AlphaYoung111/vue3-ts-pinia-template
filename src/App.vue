@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import useUserStore from '@/store/module/user/user'
 import { storeToRefs } from 'pinia'
-import { GlobalComponents } from 'vue';
+import { GlobalComponents } from 'vue'
 
 const userStore = useUserStore()
 const { age } = storeToRefs(userStore)

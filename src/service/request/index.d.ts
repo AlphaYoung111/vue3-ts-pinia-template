@@ -1,4 +1,4 @@
-import type { AxiosRequestConfig, AxiosResponse } from "axios";
+import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 // 请求拦截器
 export interface RequestInterceptors {
