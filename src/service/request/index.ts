@@ -67,7 +67,7 @@ class MyRequest {
     )
   }
 
-  request<T>(config: RequestConfig): Promise<T> {
+  request<T = any>(config: RequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 如果有某个实例得个别请求有拦截器，执行完拦截器得内容，得到改请求对应得config
       if (config.interceptors?.requestInterceptor) {
@@ -94,19 +94,19 @@ class MyRequest {
     })
   }
 
-  get<T>(config: RequestConfig) {
+  get<T>(config: RequestConfig<T>) {
     return this.request<T>({ ...config, method: 'GET' })
   }
 
-  post<T>(config: RequestConfig) {
+  post<T>(config: RequestConfig<T>) {
     return this.request<T>({ ...config, method: 'POST' })
   }
 
-  put<T>(config: RequestConfig) {
+  put<T>(config: RequestConfig<T>) {
     return this.request<T>({ ...config, method: 'PUT' })
   }
 
-  delete<T>(config: RequestConfig) {
+  delete<T>(config: RequestConfig<T>) {
     return this.request<T>({ ...config, method: 'DELETE' })
   }
 }
